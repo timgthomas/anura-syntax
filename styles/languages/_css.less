@@ -1,0 +1,59 @@
+.syntax--css {
+
+  // Variables
+  // > $foo: deeppink;
+  //   ^^^^
+  .syntax--variable {
+    color: @red;
+  }
+
+  // Punctuation in values
+  // > color: var(--foo);
+  //             ^     ^
+  .syntax--punctuation.syntax--bracket {
+    color: @syntax-text-color;
+  }
+
+  // Global units
+  // > width: 100px;
+  //             ^^
+  .syntax--constant .syntax--unit {
+    color: inherit;
+  }
+
+  // Global variable use
+  // > $bar: $foo;
+  //         ^^^^
+  .syntax--punctuation {
+    &.syntax--separator {
+      ~ .syntax--variable,
+      ~ .syntax--variable .syntax--punctuation {
+        color: @blue;
+      }
+    }
+  }
+
+  // Specific property names
+  // Disabled for now; see notes on https://github.com/timgthomas/active-syntax/issues/1.
+  // > cursor: pointer;
+  //   ^----^
+  // .syntax--property-list .syntax--entity.syntax--name.syntax--tag:not(.syntax--custom) {
+  //   color: inherit;
+  // }
+
+  // Pseudoclass
+  // > div:first-child() {}
+  //       ^^^^^^^^^^^
+  // .syntax--entity.syntax--name.syntax--tag.syntax--custom,
+  .syntax--entity.syntax--other.syntax--pseudo-class {
+    color: @light-orange;
+  }
+
+  // Media query keywords
+  // @media screen and (min-width: 1337px) {}
+  //               ^^^
+  .syntax--keyword.syntax--logical {
+    color: @purple;
+  }
+
+}

@@ -1,0 +1,31 @@
+.syntax--scss {
+
+  // Global punctuation
+  // > $color-accent: deeppink;
+  //                ^
+  .syntax--definition .syntax--punctuation {
+    color: @syntax-text-color;
+  }
+
+  // Global variable definition
+  // > $foo: deeppink;
+  //   ^^^^
+  .syntax--definition .syntax--variable {
+    color: @red;
+  }
+
+  // Counter unit
+  // > div:nth-of-type(2n + 1) {}
+  //                    ^
+  .syntax--constant.syntax--numeric + .syntax--constant.syntax--other {
+    color: @green;
+  }
+
+  // Variable interpolation
+  // > width: calc(100vh - #{$baz});
+  //                       ^^    ^
+  .syntax--punctuation.syntax--interpolation {
+    color: @green;
+  }
+
+}

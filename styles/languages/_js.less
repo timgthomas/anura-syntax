@@ -1,0 +1,42 @@
+.syntax--js {
+
+  // `of` and `in` operators
+  // > for (let foo of foos) {}
+  //                ^^
+  .syntax--keyword.syntax--operator.syntax--in,
+  .syntax--keyword.syntax--operator.syntax--of,
+  .syntax--keyword.syntax--operator.syntax--new,
+  .syntax--keyword.syntax--operator.syntax--typeof {
+    color: @purple;
+  }
+
+  // Arrow function symbol
+  // > let fn = x => {}
+  //              ^^
+  .syntax--arrow {
+    color: @syntax-text-color;
+  }
+
+  // Function definition with `let`
+  // > let fn = x => {}
+  //       ^^
+  .syntax--var + .syntax--function > .syntax--name {
+    color: @syntax-text-color;
+  }
+
+  // Constant values
+  // return true;
+  //        ^^^^
+  .syntax--constant.syntax--boolean,
+  .syntax--constant.syntax--null {
+    color: @green;
+  }
+
+  // Class names
+  // export default class ChildClass extends BaseClass
+  //                      ^^^^^^^^^^
+  .syntax--type + .syntax--class {
+    color: @red;
+  }
+
+}

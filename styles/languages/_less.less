@@ -1,0 +1,27 @@
+.syntax--less {
+
+  // Global constants
+  // > @color-accent: deeppink;
+  //                  ^------^
+  .syntax--constant:not(.syntax--media-type) {
+    color: @green;
+  }
+
+  // Pseudoclasses/pseudoelements
+  // The Less parser doesn't attach anything more specific for pseudoelements.
+  // > div:nth-of-type(2n + 1) {}
+  //      ^^^^^^^^^^^^
+  .syntax--entity + .syntax--punctuation,
+  .syntax--punctuation + .syntax--custom {
+    color: @light-orange;
+  }
+
+  // TODO: Global functions; should be @cyan, but are @blue
+  // > @color-border: darken(@color-accent, 25%);
+  //                  ^----^
+
+  // TODO: Scoped functions; should be @cyan, but are @green
+  // > color: darken(@color-accent);
+  //          ^----^
+
+}

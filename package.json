@@ -1,0 +1,16 @@
+{
+  "name": "anura-syntax",
+  "theme": "syntax",
+  "version": "0.1.0",
+  "description": "A simple syntax theme based on colors from CotEditor's 'Anura' theme.",
+  "keywords": [
+    "syntax",
+    "theme",
+    "dark"
+  ],
+  "repository": "https://github.com/timgthomas/anura-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}

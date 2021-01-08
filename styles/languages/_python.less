@@ -1,0 +1,17 @@
+.syntax--python {
+
+  // Constants
+  // > foo = None
+  //         ^^^^
+  .syntax--constant {
+    color: @green;
+  }
+
+  // List comprehension operators
+  // > [x for x in foo if x is not None]
+  //            ^^          ^^ ^^^
+  .syntax--keyword.syntax--operator.syntax--logical {
+    color: @purple;
+  }
+
+}

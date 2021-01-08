@@ -1,0 +1,28 @@
+@foo: deeppink;
+@bar: @foo;
+@baz: 13.37%;
+
+@import '_base';
+
+:root {
+  --color-emphasis: deeppink;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+div:nth-of-type(2n + 1) {}
+
+.header {
+  background-color: darken(var(--color-emphasis));
+  color: var(--color-emphasis);
+  cursor: pointer;
+  width: calc(100vh - @{baz});
+
+  span {}
+}
+
+custom-element {}
+
+@media screen and (min-width: 1337px) {}
