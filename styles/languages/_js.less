@@ -7,7 +7,7 @@
   .syntax--keyword.syntax--operator.syntax--of,
   .syntax--keyword.syntax--operator.syntax--new,
   .syntax--keyword.syntax--operator.syntax--typeof {
-    color: @purple;
+    color: @color-keywords;
   }
 
   // Arrow function symbol
@@ -29,14 +29,14 @@
   //        ^^^^
   .syntax--constant.syntax--boolean,
   .syntax--constant.syntax--null {
-    color: @green;
+    color: @color-values;
   }
 
   // Class names
   // export default class ChildClass extends BaseClass
   //                      ^^^^^^^^^^
   .syntax--type + .syntax--class {
-    color: @red;
+    color: @syntax-text-color;
   }
 
 }
