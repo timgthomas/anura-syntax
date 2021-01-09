@@ -1,10 +1,25 @@
 .syntax--css {
 
+  // At-rules
+  // @import '_palette';
+  // ^^^^^^^
+  .syntax--at-rule.syntax--control,
+  .syntax--at-rule .syntax--keyword {
+    color: @color-commands;
+  }
+
+  // Class selectors
+  // .foo {}
+  // ^^^^
+  .syntax--entity.syntax--other.syntax--attribute-name {
+    color: @color-keywords;
+  }
+
   // Variables
-  // > $foo: deeppink;
-  //   ^^^^
+  // > --foo: deeppink;
+  //   ^^^^^
   .syntax--variable {
-    color: @red;
+    color: inherit;
   }
 
   // Punctuation in values
@@ -46,14 +61,14 @@
   //       ^^^^^^^^^^^
   // .syntax--entity.syntax--name.syntax--tag.syntax--custom,
   .syntax--entity.syntax--other.syntax--pseudo-class {
-    color: @light-orange;
+    color: @color-variables;
   }
 
   // Media query keywords
   // @media screen and (min-width: 1337px) {}
   //               ^^^
   .syntax--keyword.syntax--logical {
-    color: @purple;
+    color: @color-commands;
   }
 
 }
