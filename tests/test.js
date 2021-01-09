@@ -20,11 +20,14 @@ export default class ChildClass extends BaseClass {
     this.bar = this.bar(bar);
   }
 
+  @decorator get decoratedGetter() {}
+
   get foo() {
     console.log(`getting foo (${this.bar(foo)})...`);
     return this.foo;
   }
 
+  @decorator('val')
   bar(val) {
     if (!val) {
       throw new Error('val is not defined');

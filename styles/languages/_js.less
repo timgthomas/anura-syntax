@@ -39,4 +39,25 @@
     color: @syntax-text-color;
   }
 
+  // Object literal keys
+  // let obj: { key: 'value' };
+  //            ^^^
+  .syntax--key > .syntax--string {
+    color: @syntax-text-color;
+  }
+
+  // Decorator
+  // @decorator func() {}
+  // ^^^^^^^^^^
+  .syntax--decorator {
+    color: @color-commands;
+  }
+
+  // Decorator with accessor
+  // @decorator get decoratedGetter() {}
+  //            ^^^
+  .syntax--decorator ~ .syntax--readwrite:not(.syntax--decorator) {
+    color: @color-keywords;
+  }
+
 }
