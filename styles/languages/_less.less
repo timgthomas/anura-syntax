@@ -4,7 +4,7 @@
   // > @color-accent: deeppink;
   //                  ^------^
   .syntax--constant:not(.syntax--media-type) {
-    color: @green;
+    color: @color-numbers;
   }
 
   // Pseudoclasses/pseudoelements
@@ -16,6 +16,26 @@
     color: @color-variables;
   }
 
+  // Global variable use
+  // > @bar: @foo;
+  //         ^^^^
+  .syntax--punctuation {
+    &.syntax--separator {
+      ~ .syntax--variable,
+      ~ .syntax--variable .syntax--punctuation {
+        color: @color-numbers;
+      }
+    }
+  }
+
+  // Interpolation
+  // The parser doesn't distinguish between boundaries and content, so we color the entire thing.
+  // > width: calc(100vh - @{baz});
+  //                       ^^^^^^
+  .syntax--variable.syntax--interpolation {
+    color: @color-strings;
+  }
+
   // TODO: Global functions; should be @cyan, but are @blue
   // > @color-border: darken(@color-accent, 25%);
   //                  ^----^
@@ -23,5 +43,9 @@
   // TODO: Scoped functions; should be @cyan, but are @green
   // > color: darken(@color-accent);
   //          ^----^
+
+  // TODO: Calculation constants
+  // > :nth-of-type(2n + 1) {}
+  //                 ^
 
 }

@@ -11,21 +11,33 @@
   // > $foo: deeppink;
   //   ^^^^
   .syntax--definition .syntax--variable {
-    color: @red;
+    color: @syntax-text-color;
   }
 
   // Counter unit
   // > div:nth-of-type(2n + 1) {}
   //                    ^
   .syntax--constant.syntax--numeric + .syntax--constant.syntax--other {
-    color: @green;
+    color: @color-numbers;
   }
 
   // Variable interpolation
   // > width: calc(100vh - #{$baz});
   //                       ^^    ^
   .syntax--punctuation.syntax--interpolation {
-    color: @green;
+    color: @color-strings;
+  }
+
+  // Global variable use
+  // > $bar: $foo;
+  //         ^^^^
+  .syntax--punctuation {
+    &.syntax--separator {
+      ~ .syntax--variable,
+      ~ .syntax--variable .syntax--punctuation {
+        color: @color-numbers;
+      }
+    }
   }
 
 }

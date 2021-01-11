@@ -36,18 +36,6 @@
     color: inherit;
   }
 
-  // Global variable use
-  // > $bar: $foo;
-  //         ^^^^
-  .syntax--punctuation {
-    &.syntax--separator {
-      ~ .syntax--variable,
-      ~ .syntax--variable .syntax--punctuation {
-        color: @blue;
-      }
-    }
-  }
-
   // Specific property names
   // Disabled for now; see notes on https://github.com/timgthomas/active-syntax/issues/1.
   // > cursor: pointer;

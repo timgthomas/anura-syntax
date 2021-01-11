@@ -4,14 +4,19 @@
   // > foo = None
   //         ^^^^
   .syntax--constant {
-    color: @green;
+    color: @color-numbers;
   }
 
   // List comprehension operators
   // > [x for x in foo if x is not None]
   //            ^^          ^^ ^^^
   .syntax--keyword.syntax--operator.syntax--logical {
-    color: @purple;
+    color: @color-keywords;
   }
+
+  // TODO: Attribute punctuation
+  // Parser doesn't differentiate between a decorator and its punctuation
+  // > @attribute('foo')
+  //             ^     ^
 
 }
