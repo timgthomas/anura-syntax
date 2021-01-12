@@ -6,6 +6,7 @@ const foos = [ 'foo', 'bar' ],
 let defaults = {
   foo: 'foo',
   bar: null,
+  'baz.qux': 42,
 };
 
 for (let foo of foos) {}
