@@ -22,7 +22,6 @@ To make changes to Anura:
 ## Publishing to APM
 
 ```
-npm version X.X.X
-git push && git push --tags
-apm publish -t vX.X.X
+apm publish [<newversion> | major | minor | patch | build]
+git push --tags
 ```
