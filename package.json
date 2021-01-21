@@ -1,7 +1,7 @@
 {
   "name": "anura-syntax",
   "theme": "syntax",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A simple syntax theme based on colors from CotEditor's 'Anura' theme.",
   "keywords": [
     "syntax",
