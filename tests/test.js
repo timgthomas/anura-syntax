@@ -9,6 +9,8 @@ let defaults = {
   'baz.qux': 42,
 };
 
+delete defaults.bar;
+
 for (let foo of foos) {}
 for (var def in defaults) {}
 for (var i = 0; i < foos.length; i++) {}
