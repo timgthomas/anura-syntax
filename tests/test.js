@@ -30,6 +30,7 @@ export default class ChildClass extends BaseClass {
     return this.foo;
   }
 
+  @Decorator
   @decorator('val')
   bar(val) {
     if (!val) {
