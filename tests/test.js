@@ -33,7 +33,7 @@ export default class ChildClass extends BaseClass {
   @Decorator
   @decorator('val')
   bar(val) {
-    if (!val) {
+    if (!val || val === undefined) {
       throw new Error('val is not defined');
     }
     let result = Math.round(val * 0.42);
