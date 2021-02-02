@@ -36,6 +36,24 @@
     color: @color-strings;
   }
 
+  // CSS-specific keys
+  // vector-effect: non-scaling-stroke;
+  // ^^^^^^^^^^^^^^
+  .syntax--meta.syntax--property-list .syntax--custom,
+  .syntax--meta.syntax--property-list .syntax--custom + .syntax--punctuation {
+    color: @syntax-text-color;
+  }
+
+  // CSS-specific values
+  // vector-effect: non-scaling-stroke;
+  //                ^^^^^^^^^^^^^^^^^^
+  .syntax--meta.syntax--property-list .syntax--property-value .syntax--custom {
+    color: @color-numbers;
+  }
+  .syntax--meta.syntax--property-list .syntax--property-value .syntax--brace:not(.syntax--interpolation) {
+    color: @syntax-text-color;
+  }
+
   // TODO: Global functions; should be @cyan, but are @blue
   // > @color-border: darken(@color-accent, 25%);
   //                  ^----^

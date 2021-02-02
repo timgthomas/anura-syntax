@@ -40,4 +40,14 @@
     }
   }
 
+  // CSS-specific values
+  // vector-effect: non-scaling-stroke;
+  //                ^^^^^^^^^^^^^^^^^^
+  .syntax--meta.syntax--property-list .syntax--property-value:not(.syntax--punctuation) {
+    color: @color-numbers;
+  }
+  .syntax--meta.syntax--property-list .syntax--property-value .syntax--punctuation:not(.syntax--interpolation) {
+    color: @syntax-text-color;
+  }
+
 }

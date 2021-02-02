@@ -10,6 +10,7 @@ $baz: 13.37%;
 
 div {
   box-sizing: border-box;
+  vector-effect: non-scaling-stroke;
 }
 
 div:nth-of-type(2n + 1) {}
